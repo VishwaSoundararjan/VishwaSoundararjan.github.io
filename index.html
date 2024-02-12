@@ -9,5 +9,16 @@
   </head>
   <body>
 	<script src="index.js"></script>
+	<script>
+		window.addEventListener('message', function(event) {
+    	if (event.origin === 'https://logeshm05.github.io' && event.data.action === 'sendData') {
+        // Access the data sent by website4
+        var dataFromWebsite1 = event.data.dataFromWebsite1;
+        var dataFromWebsite2 = event.data.dataFromWebsite2;
+        console.log('Data from website1:', dataFromWebsite1);
+        console.log('Data from website2:', dataFromWebsite2);
+    }
+});
+	</script>
   </body>
 </html>
